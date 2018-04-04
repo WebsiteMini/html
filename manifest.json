@@ -1,0 +1,38 @@
+{
+  "name": "WebsiteMini.net",
+  "short_name": "WebsiteMini",
+  "start_url": "https://www.websitemini.net/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#00acc1",
+  "description": "Blog yang membahas tentang Tutorial, Tips, Trik, Template, Widget, Internet, dan belajar SEO.",
+  "icons": [{
+    "src": "https://3.bp.blogspot.com/-e-qgdzxrOok/WsQ59mJ22KI/AAAAAAAAB1M/2Mu6C7MJ9QYWOQoIUXKd5vkrA59Kd3aFgCLcBGAs/s48/android-icon-192x192.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "https://3.bp.blogspot.com/-e-qgdzxrOok/WsQ59mJ22KI/AAAAAAAAB1M/2Mu6C7MJ9QYWOQoIUXKd5vkrA59Kd3aFgCLcBGAs/s72/android-icon-192x192.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "https://3.bp.blogspot.com/-e-qgdzxrOok/WsQ59mJ22KI/AAAAAAAAB1M/2Mu6C7MJ9QYWOQoIUXKd5vkrA59Kd3aFgCLcBGAs/s96/android-icon-192x192.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "https://3.bp.blogspot.com/-e-qgdzxrOok/WsQ59mJ22KI/AAAAAAAAB1M/2Mu6C7MJ9QYWOQoIUXKd5vkrA59Kd3aFgCLcBGAs/s144/android-icon-192x192.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "https://3.bp.blogspot.com/-e-qgdzxrOok/WsQ59mJ22KI/AAAAAAAAB1M/2Mu6C7MJ9QYWOQoIUXKd5vkrA59Kd3aFgCLcBGAs/s168/android-icon-192x192.png",
+    "sizes": "168x168",
+    "type": "image/png"
+  }, {
+    "src": "https://3.bp.blogspot.com/-e-qgdzxrOok/WsQ59mJ22KI/AAAAAAAAB1M/2Mu6C7MJ9QYWOQoIUXKd5vkrA59Kd3aFgCLcBGAs/s192/android-icon-192x192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }, {
+    "src": "https://4.bp.blogspot.com/-0cSbcc8HEp0/WsQ7SnoZkwI/AAAAAAAAB1U/-jK74HBKG2AX3HtiJC3RvzaIyOoQ-pZ-wCKgBGAs/s512/a%2B3%2Btransparan.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
