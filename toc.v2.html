@@ -1,5 +1,47 @@
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700,300i,400i,700i' rel='stylesheet' type='text/css'/>
+<style type='text/css'>
+body{font-family:'Open Sans',sans-serif;background: #fff;}
+*{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+toc-outer{font-size:11px;margin:-10px 10px 7px}
+.toc-outer table{margin:0}
+.toc-outer input,.toc-outer select{font:inherit;padding:5px;border:2px solid #508ebc}
+.toc-outer label{display:block;font-weight:700;text-align:right;margin:7px 5px 0 0}
+.toc-feed-container{margin:0 -30px;overflow:visible}
+.toc-outer td{padding:2px}.toc-feed-container li{background:#508ebc;color:#cff5ff;margin:0;border-top:1px solid #4679a0;box-shadow:inset 0 1px 0 #5a9bcb}
+.toc-feed-container li:first-child{border-top:none}
+.toc-thumbnail{float:left;margin:0 15px 0 0;padding:5px;background:#62a0ce}
+.toc-title,.toc-title:active,.toc-title:focus,.toc-title:hover{font-size:13px;font-weight:700;line-height:18px;color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,.2)}
+.search-description-message{display:block;margin:0 -30px;padding:12px;font-weight:700;background:#3b6281;border-top:1px solid #34526a;border-bottom:1px solid #34526a;color:#fcd6db}
+.toc-feed-nav{margin:10px -20px 0}.toc-feed-nav span{cursor:wait}
+
+.list-media{font-size:11px}
+.list-media,.list-media li{list-style:none;margin:0;padding:0;overflow:hidden;line-height:16px;word-wrap:break-word;text-align:left}
+.list-media-content,.list-media-meta,.list-media-title{margin-left:50px}.list-media li{padding:10px}
+.list-media-title{font-size:13px;margin-bottom:2px}
+.list-media-meta{margin-top:2px}.list-media-meta time{opacity:.4}
+.list-media-thumbnail{float:left;width:40px;height:40px;max-width:none;max-height:none;background:#ccc;margin:0 10px 0 0}.required,.text-alert{color:#cc9393}
+</style>
+<div class="toc-outer" id="toc-outer"><table border="0"><tbody>
+<tr><td><label for="toc-feed-order">Urutkan artikel berdasarkan:</label></td><td><select class="toc-feed-order" id="toc-feed-order"><option value="published" selected>Posting Terbaru</option><option value="updated">Posting Diperbaharui</option></select></td></tr>
+<tr><td><label for="toc-label-sorter">Filter artikel berdasarkan kategori:</label></td><td><select class="toc-label-sorter" id="toc-label-sorter" disabled><option selected>Memuat...</option></select></td></tr>
+<tr><td><label for="toc-feed-searcher-text">Cari dengan kata kunci:</label></td><td><form class="toc-feed-searcher" id="toc-feed-searcher"><input type="text" class="toc-feed-searcher-text" id="toc-feed-searcher-text" autocomplete="off"></form></td></tr>
+</tbody></table></div><header class="toc-result-description" id="toc-result-description"></header><ul id="toc-feed-container" class="list-media toc-feed-container"></ul><div class="toc-feed-nav" id="toc-feed-nav"></div>
+<script>
+function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if(pair[0] == variable){return pair[1];}
+  }
+  return(false);
+}
+</script>
+<script type='text/javaScript'>
 /*!
  * Advanced Blogger TOC Script by Taufik Nurrohman
  * URL: https://plus.google.com/108949996304093815163/about
  */
 var loadToc,loadCategories,_toc={init:function(){var e={homePage:"//"+window.location.hostname,maxResults:30,numChars:270,thumbWidth:80,navText:"Berikutnya",resetToc:"Kembali ke Awal",noImage:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWOor68HAAL+AX7vOF2TAAAAAElFTkSuQmCC",loading:"<span class='button disabled'>Memuat...</span>",counting:"<div class='search-description-message'>Menghitung artikel...</div>",searching:"<span class='button disabled'>Mencari...</span>"},t=document,a=function(e){return t.getElementById(e)},n={a:a("toc-feed-order"),b:a("toc-label-sorter").parentNode,c:a("toc-feed-searcher"),d:a("toc-feed-searcher-text"),e:a("toc-result-description"),f:a("toc-feed-container"),g:a("toc-feed-nav"),h:t.getElementsByTagName("head")[0],i:0,j:null,k:"published",l:0,m:""},r={a:function(e){var t=a(e);t.parentNode.removeChild(t)},b:function(e,i){var s=t.createElement("script");s.type="text/javascript",s.id=i,s.src=e,a(i)&&r.a(i),n.h.appendChild(s)},c:function(t,a,i){n.i++,n.e.innerHTML=e.counting,n.g.innerHTML=e[1==t?"searching":"loading"],0===t?r.b(null!==a?e.homePage+"/feeds/posts/summary/-/"+a+"?alt=json-in-script&start-index="+(n.i*e.maxResults+1)+"&max-results="+e.maxResults+"&orderby="+i+"&callback=loadToc":e.homePage+"/feeds/posts/summary?alt=json-in-script&start-index="+(n.i*e.maxResults+1)+"&max-results="+e.maxResults+"&orderby="+i+"&callback=loadToc","temporer-script-1"):1==t&&r.b(e.homePage+"/feeds/posts/summary?alt=json-in-script&start-index="+(n.i*e.maxResults+1)+"&max-results="+e.maxResults+"&q="+a+"&orderby="+i+"&callback=loadToc","temporer-script-1"),n.j=null!==a?a:null,n.l=t,n.a.disabled=!0,n.b.children[0].disabled=!0},d:function(a){var i;if(n.g.innerHTML="",n.e.innerHTML=1==n.l?'<div class="search-description-message">Hasil penelusuran untuk kata kunci <strong>&#8220;'+n.m+"&#8221;</strong> ("+a.feed.openSearch$totalResults.$t+" Temuan)</div>":'<div class="search-description-message">Total: '+a.feed.openSearch$totalResults.$t+" Artikel</div>","entry"in a.feed){for(var s,o,l,c,d=a.feed.entry,u="0 Komentar",p=0;p<e.maxResults&&p!=d.length;p++){s=d[p].title.$t,l="summary"in d[p]?d[p].summary.$t.replace(/<br ?\/?>/gi," ").replace(/<.*?>/g,"").replace(/[<>]/g,"").substring(0,e.numChars):"",c="media$thumbnail"in d[p]?d[p].media$thumbnail.url.replace(/\/s[0-9]+\-c/,"/s"+e.thumbWidth+"-c"):e.noImage.replace(/\/s[0-9]+\-c/,"/s"+e.thumbWidth+"-c");for(var f=0,h=d[p].link.length;h>f;f++)if("alternate"==d[p].link[f].rel){o=d[p].link[f].href;break}for(var m=0,g=d[p].link.length;g>m;m++)if("replies"==d[p].link[m].rel&&"text/html"==d[p].link[m].type){u=d[p].link[m].title;break}i=t.createElement("li"),i.innerHTML='<div class="toc-inner cf"><img style="width:'+e.thumbWidth+"px!important;height:"+e.thumbWidth+'px!important;max-width:none!important;max-height:none!important;" src="'+c+'" alt="'+s+'" class="toc-thumbnail"><a class="toc-title" href="'+o+'" target="_blank">'+s+"</a><strong> - ("+u+')</strong><br><div class="toc-summary">'+l+"&hellip;</div></div>",n.f.appendChild(i)}i=t.createElement("a"),i.className="button",i.href="#load-more",i.innerHTML=e.navText,i.onclick=function(){return r.c(n.l,n.j,n.k),!1}}else i=t.createElement("a"),i.className="button",i.href="#reset-content",i.innerHTML=e.resetToc,i.onclick=function(){return n.i=-1,n.e.innerHTML=e.counting,n.f.innerHTML="",r.c(0,null,"published"),n.a.innerHTML=n.a.innerHTML,n.b.children[0].innerHTML=n.b.children[0].innerHTML,!1};n.g.appendChild(i),n.a.disabled=!1,n.b.children[0].disabled=!1},e:function(t){for(var a=t.feed.category,i='<select id="toc-label-sorter"><option value="" selected disabled>Kategori...</option>',s=0,o=a.length;o>s;s++)i+='<option value="'+encodeURIComponent(a[s].term)+'">'+a[s].term+"</option>";i+="</select>",n.b.innerHTML=i,n.b.children[0].onchange=function(){n.i=-1,n.f.innerHTML="",n.g.innerHTML=e.loading,r.c(0,this.value,n.k)}}};loadToc=r.d,loadCategories=r.e,r.b(e.homePage+"/feeds/posts/summary?alt=json-in-script&start-index="+(n.i+1)+"&max-results="+e.maxResults+"&orderby=published&callback=loadToc","temporer-script-1"),r.b(e.homePage+"/feeds/posts/summary?alt=json-in-script&max-results=0&orderby=published&callback=loadCategories","temporer-script-2"),n.a.onchange=function(){n.i=-1,n.f.innerHTML="",n.g.innerHTML=e.counting,n.b.children[0].innerHTML=n.b.children[0].innerHTML,r.c(0,null,this.value),n.k=this.value},n.c.onsubmit=function(){return n.i=-1,n.f.innerHTML="",n.m=n.d.value,r.c(1,n.d.value,n.k),!1}}};_toc.init();
+</script>
